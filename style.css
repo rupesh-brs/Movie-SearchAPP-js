@@ -1,0 +1,58 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(cinema.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-attachment: fixed; 
+
+}
+
+h1 {
+    color: #343a40;
+    margin-bottom: 30px;
+}
+
+#movies .card {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    height: 350px;
+    object-fit: cover;
+}
+
+.modal-body img {
+    width: 100%;
+    height: auto;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+}
+
+.input-group .form-control {
+    border-radius: 0;
+}
+
+.input-group-append .btn {
+    border-radius: 0;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.input-group .form-control:focus {
+    border-color: #000000;
+    box-shadow: none;
+}
+
+#load {
+    display: none;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Movie Search App</h1>
+        <div class="row mb-4 justify-content-center">
+            <div class="col-md-8">
+                <div class="input-group">
+                    <input id="name" type="text" class="form-control" placeholder="Enter movie name" onkeypress="if(event.key === 'Enter') showCovers()">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" onclick="showCovers()">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="movies"></div>
+    </div>
+
+    <!-- Modal for movie details -->
+    <div class="modal fade" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Movie Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="img" src="" alt="Movie Poster">
+                    <p><strong>Genre: </strong><span id="genre"></span></p>
+                    <p><strong>Release: </strong><span id="release"></span></p>
+                    <p><strong>Director: </strong><span id="director"></span></p>
+                    <p><strong>Writer: </strong><span id="writer"></span></p>
+                    <p><strong>Actors: </strong><span id="actors"></span></p>
+                    <p><strong>Plot: </strong><span id="plot"></span></p>
+                    <p><strong>IMDb Rating: </strong><span id="numPuntuacion"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
